@@ -1,0 +1,4 @@
+services:
+	errorFormatter.toon:
+		class: PeterFox\PhpStanToonFormatter\ToonErrorFormatter
+

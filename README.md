@@ -4,15 +4,10 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/peterfox/phpstan-toon-formatter/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peterfox/phpstan-toon-formatter/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/peterfox/phpstan-toon-formatter.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpstan-toon-formatter)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+A PHPStan error formatter that outputs errors in the [TOON](https://github.com/helgesverre/toon) (Typed Object-Oriented Notation) format.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/PHPStan Toon Formatter.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/PHPStan Toon Formatter)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+The purpose of this package is to make it easier to integrate PHPStan into your CI pipeline and reduce the amount of tokens spent
+when working with AI agents.
 
 ## Installation
 
@@ -22,14 +17,28 @@ You can install the package via composer:
 composer require peterfox/phpstan-toon-formatter
 ```
 
+If you have `phpstan/extension-installer` installed, you're all set! The formatter will be automatically registered.
+
+If you don't use the extension installer, you can manually include the configuration in your `phpstan.neon` or `phpstan.neon.dist` file:
+
+```neon
+includes:
+    - vendor/peterfox/phpstan-toon-formatter/extension.neon
+```
+
 ## Usage
 
-```php
-$skeleton = new PeterFox\PhpStanToonFormatter();
-echo $skeleton->echoPhrase('Hello, PeterFox!');
+To use the TOON formatter, run PHPStan with the `--error-format=toon` option:
+
+```bash
+vendor/bin/phpstan analyse --error-format=toon
 ```
 
 ## Testing
+
+If you want to further develop this package, please refer to the [CONTRIBUTING](https://github.com/peterfox/phpstan-toon-formatter/blob/main/CONTRIBUTING.md) guide.
+
+Tests can be run using:
 
 ```bash
 composer test
