@@ -14,7 +14,7 @@ when working with AI agents.
 You can install the package via composer:
 
 ```bash
-composer require peterfox/phpstan-toon-formatter
+composer require peterfox/phpstan-toon-formatter --dev
 ```
 
 If you have `phpstan/extension-installer` installed, you're all set! The formatter will be automatically registered.
