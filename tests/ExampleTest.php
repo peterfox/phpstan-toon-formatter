@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace PeterFox\PhpStanToonFormatter\Tests;
 
 use PHPUnit\Framework\TestCase;
 
