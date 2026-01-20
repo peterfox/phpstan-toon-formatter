@@ -3,7 +3,11 @@
     "description": "A TOON output formatter for PHPStan",
     "keywords": [
         "peterfox",
-        "phpstan-toon-formatter"
+        "phpstan-toon-formatter",
+        "phpstan",
+        "toon",
+        "ai",
+        "phpstan-error-formatter"
     ],
     "homepage": "https://github.com/peterfox/phpstan-toon-formatter",
     "license": "MIT",
@@ -35,7 +39,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/phpunit --no-coverage",
         "test-coverage": "vendor/bin/phpunit --coverage",
         "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes"
     },
