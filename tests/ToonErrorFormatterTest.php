@@ -3,10 +3,10 @@
 namespace PeterFox\PhpStanToonFormatter\Tests;
 
 use HelgeSverre\Toon\Toon;
+use PeterFox\PhpStanToonFormatter\ToonErrorFormatter;
 use PHPStan\Analyser\Error;
 use PHPStan\Command\AnalysisResult;
 use PHPStan\Command\Output;
-use PeterFox\PhpStanToonFormatter\ToonErrorFormatter;
 use PHPUnit\Framework\TestCase;
 
 class ToonErrorFormatterTest extends TestCase
