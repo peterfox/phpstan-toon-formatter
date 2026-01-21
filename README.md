@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/peterfox/phpstan-toon-formatter/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peterfox/phpstan-toon-formatter/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/peterfox/phpstan-toon-formatter.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpstan-toon-formatter)
 
-A PHPStan error formatter that outputs errors in the [TOON](https://github.com/helgesverre/toon) (Typed Object-Oriented Notation) format.
+A PHPStan error formatter that outputs errors in the [TOON](https://github.com/helgesverre/toon-php) (Typed Object-Oriented Notation) format.
 
 The purpose of this package is to make it easier to integrate PHPStan into your CI pipeline and reduce the amount of tokens spent
 when working with AI agents.
