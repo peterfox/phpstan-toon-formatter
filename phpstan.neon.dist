@@ -9,3 +9,10 @@ parameters:
 
     # Level 10 is the highest level
     level: 6
+    ignoreErrors:
+        -
+            message: '#^Creating new PHPStan\\Analyser\\Error is not covered by backward compatibility promise\.#'
+            path: tests/*
+        -
+            message: '#^Creating new PHPStan\\Command\\AnalysisResult is not covered by backward compatibility promise\.#'
+            path: tests/*
