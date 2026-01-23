@@ -11,7 +11,7 @@ class ToonErrorFormatter implements ErrorFormatter
 {
     public function formatErrors(AnalysisResult $analysisResult, Output $output): int
     {
-        if (!$analysisResult->hasErrors()) {
+        if (! $analysisResult->hasErrors()) {
             $output->writeRaw('ok');
 
             return 0;
@@ -59,6 +59,6 @@ class ToonErrorFormatter implements ErrorFormatter
 
         $output->writeRaw(Toon::encode($errorsArray));
 
-        return $analysisResult->hasErrors() ? 1 : 0;
+        return 1;
     }
 }
