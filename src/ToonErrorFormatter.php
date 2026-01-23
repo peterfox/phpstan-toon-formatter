@@ -11,6 +11,12 @@ class ToonErrorFormatter implements ErrorFormatter
 {
     public function formatErrors(AnalysisResult $analysisResult, Output $output): int
     {
+        if (!$analysisResult->hasErrors()) {
+            $output->writeRaw('ok');
+
+            return 0;
+        }
+
         $errorsArray = [
             'totals' => [
                 'errors' => count($analysisResult->getNotFileSpecificErrors()),

@@ -90,18 +90,9 @@ class ToonErrorFormatterTest extends TestCase
         );
         $output = $this->createMock(Output::class);
 
-        $expectedData = [
-            'totals' => [
-                'errors' => 0,
-                'file_errors' => 0,
-            ],
-            'files' => [],
-            'errors' => [],
-        ];
-
         $output->expects($this->once())
             ->method('writeRaw')
-            ->with(Toon::encode($expectedData));
+            ->with('ok');
 
         $formatter = new ToonErrorFormatter();
         $exitCode = $formatter->formatErrors($analysisResult, $output);
